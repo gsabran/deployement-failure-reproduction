@@ -1,0 +1,21 @@
+{
+  "name": "Pie",
+  "private": "true",
+  "version": "1.0.0",
+  "author": "gsabran",
+  "license": "All right reserved",
+  "main": "src/server/index.js",
+  "browser": "src/client/index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001",
+    "unit-test": "npm run client-unit-test",
+    "other-unit-test": "mocha ./tests --compilers js:babel-register",
+    "client-unit-test": "NODE_PATH='src' IS_TEST=true mocha .scripts/mocha_boot.js src/**/.tests/**/*.jsx --compilers js:babel-core/register --require ignore-styles",
+    "fixlint": "eslint --fix  ./src",
+    "lint": "eslint --config .eslintrc-prod.js --quiet ./src && eslint --config .eslintrc-prod.js --quiet ./unit-tests",
+    "integration-test": "meteor test --once --full-app --driver-package dispatch:mocha-phantomjs",
+    "ci": "meteor test --full-app --driver-package dispatch:mocha-phantomjs",
+    "test-for-prod": "npm run test-for-dev && npm run integration-test",
+    "test-for-dev": "npm run lint && npm run unit-test"
+  }
+}

@@ -1,0 +1,18 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base@1.0.4             # Packages every Meteor app needs to have
+mobile-experience@1.0.4       # Packages for a great mobile UX
+mongo@1.1.12                   # The database Meteor supports right now
+tracker@1.1.0                 # Meteor's client-side reactive programming library
+es5-shim@4.6.14                # ECMAScript 5 compatibility for older browsers.
+ddp@1.2.5
+ddp-common@1.2.6
+
+ecmascript@0.5.8
+ less@2.7.5
+
+meteorhacks:fast-render@2.14.0
